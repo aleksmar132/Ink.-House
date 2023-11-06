@@ -1,0 +1,70 @@
+$white: #fff;
+$black: #2C2D35;
+$gray: #86928B;
+
+$greenback: #E1EDE6;
+$green:#598D66;
+$darkgreen: #376B44;
+$greenfocus: #D4E8D9;
+
+$yellow: #EEDB6D;
+$lightyellow: #FAEB97;
+
+$z-point: 100;
+
+@mixin button {
+  font-size: 20px;
+  font-weight: 500;
+  background-color: $white;
+  color: $green;
+  padding: 20px 60px;
+  border: 1px solid $green;
+
+  @include tablet {
+    font-size: 18px;
+  }   
+}
+
+@mixin buttonYellow {
+  font-size: 20px;
+  font-weight: 500;
+  background-color: $yellow;
+  color: $black;
+  padding: 20px 60px;
+  border: 1px solid $yellow;
+
+  @include tablet768 {
+    font-size: 18px;
+    padding: 15px 35px;
+}
+}
+
+
+
+@mixin menuLogo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include tablet {
+    align-items: flex-start;
+  }
+}
+
+@mixin iconStar {
+  height: 35px;
+  width: 35px;
+  fill: $green;
+  margin-top: 3px;
+}
+
+@mixin logoTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: $green;
+  margin-left: 8px;
+
+  @include tablet {
+    padding-top:  8px;
+  }
+}

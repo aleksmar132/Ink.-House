@@ -1,0 +1,204 @@
+.edgeFooter {
+    height: 168px;
+    background-color: $greenback;
+
+    @include tablet {
+        height: 250px;
+    }
+
+    @include tablet768 {
+        height: 319px;
+    }
+
+    .mainFooter {
+        height: 100%;
+        display: flex;
+        padding: 23px 0;
+
+        @include tablet {
+            flex-wrap: wrap;
+        }
+
+        @include tablet768 {
+            justify-content: center;
+        }
+
+        .footerAbout {
+            flex-basis: 230px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include tablet {
+                flex-basis: 100%;
+                margin-right: 0;
+                flex-direction: row;
+            }
+
+            @include tablet768 {
+                margin-bottom: 10px;
+            }
+
+            @include phones {
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 5px;
+                border-bottom: 1px solid #C3D1C6;
+            }
+         
+            .footerAboutLogo {
+                @include menuLogo;
+                width: 143px;
+
+                #iconStar {
+                    @include iconStar;
+                }
+
+                .footerAboutLogoTitle {
+                    @include logoTitle;
+                }
+            }
+
+            .footerAboutContact {
+
+                a {
+                    font-size: 20px;
+                    font-weight: 500;
+                    color: $black;
+                }
+
+                p {
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: $gray;
+                    margin-top: 8px;
+
+                    @include tablet768 {
+                        font-size: 16px;
+                        margin-top: 6px;
+                    }
+
+                    @include phones {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        footer {
+            flex: 1;
+            display: flex;
+
+            @include tablet768 {
+                justify-content: space-between;
+                width: 100%;
+                border-bottom: 1px solid #C3D1C6;
+                flex: none;
+            }
+
+            @include phones {
+                flex-wrap: wrap;
+            }
+
+            ul {
+                margin-right: 50px;
+
+                @include tablet768 {
+                    margin-right: 0;
+                }
+
+                li {
+                    margin-bottom: 6px;
+
+                    a {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: $gray;
+
+                        @include tablet768 {
+                            font-size: 16px;
+                        }
+                    }
+
+                    
+                    .footerReproductionBlack {
+                        color: $black;
+                        font-size: 20px;
+
+                        @include tablet768 {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footerDetails {
+            flex-basis: 132px;
+
+            @include tablet {
+                flex-basis: 170px;
+            }
+
+            @include tablet768 {
+                margin-top: 10px;
+                display: flex; 
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footerDetailsIcons {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                height: 24px;
+                width: 132px;
+                
+                @include tablet {
+                    width: 132px;
+                }   
+
+                a {
+                    height: 24px;
+                    width: 24px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;                    
+
+                    &:focus {
+                        background: $greenfocus;
+                    }
+
+                    .iconFooter {
+                        height: 24px;
+                        width: 24px;
+
+                        &:hover {
+                            fill: $green;
+                        }
+                    }
+
+                    .iconFooterInst {
+                        height: 20px;
+                        width: 20px;
+                    }
+                }
+            }
+
+            .footerDetailsText {
+
+                @include tablet768 {
+                    display: flex;
+                    width: 176px;
+                }
+
+                p {
+                    font-size: 12px;
+                    font-weight: 500;
+                    color: $gray;
+                    margin-bottom: 6px;
+                }
+            }
+        }
+    }
+}

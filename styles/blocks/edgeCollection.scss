@@ -1,0 +1,182 @@
+.edgeCollection {
+    height: 574px;
+    background: url(./assets/images/backgroundCollection.png) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+
+    @include tablet {
+        background-size: 100% 100%;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color:rgba(0, 0, 0, .5);
+        }
+    }
+
+    @include tablet768 {
+        height: 410px;
+    }
+
+    @include phones {
+        height: 550px;      
+    }
+
+    .mainCollection {
+        position: relative;
+        width: 57%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        @include tablet {
+            width: 100%;
+        }
+
+        .collectionContent {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            flex: 50%;
+
+            @include tablet768 {
+                flex: 58%;
+            }
+
+            .collectionContentTitle {
+                height: 80px;
+                display: flex;
+
+                @include tablet768 {
+                    height: 50px;
+                }
+
+                .collectionContentTitleIcon {
+                    height: 80px;
+                    position: relative;
+                    flex-basis: 80px;
+                    
+
+                    @include tablet768 {
+                        height: 50px;
+                    }
+
+                    a {
+                        height: 80px;
+                        width: 80px;
+                        position: absolute;
+
+                        @include tablet768 {
+                            height: 50px;
+                            width: 50px;
+                        }
+
+                        #iconStarYellow {
+                            height: 100%;
+                            width: 100%;
+                            fill: none;
+                            stroke: $yellow;
+                            stroke-width: 3px;
+                            position: relative;
+                        }
+                    }
+                }
+
+                .collectionContentTitleText {
+                    flex: 1;
+                    padding-left: 80px;
+
+                    @include tablet768 {
+                        padding-left: 0;
+                    }
+
+                    h2 {
+                        color: $white;
+                        line-height: 38px;
+                        width: 470px;
+
+                        @include tablet {
+                            width: 370px;
+                        }
+
+                        @include tablet768 {
+                            line-height: 25px;
+                            width: 261px;
+                        }
+                    }   
+                }                
+            }
+
+            .collectionContentShareholder {
+                font-size: 18px;
+                font-weight: 500;
+                color: $white;
+                line-height: 27px;
+                width: 555px;
+
+                @include tablet {
+                    width: 100%;
+                }
+
+                @include tablet768 {
+                    font-size: 16px;
+                }
+            }
+
+            .collectionContentSuccess {
+                font-size: 18px;
+                font-weight: 500;
+                color: $white;
+                line-height: 27px;
+                width: 555px;
+
+                @include tablet {
+                    width: 100%;
+                }
+
+                @include tablet768 {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .collectionButton {
+            flex: 1;
+
+            button {
+                @include buttonYellow;
+
+                &:hover {
+                    color: $black; 
+                    background: $lightyellow;
+                    border: 1px solid $lightyellow;
+                }
+
+                &:focus {
+                    color: $black; 
+                    background: $lightyellow;
+                    border: 1px solid #A38314;
+                }
+
+                &:active {
+                    color: $black; 
+                    background: #D9B949;
+                    border: 1px solid #D9B949;
+                }
+
+                @include phones {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

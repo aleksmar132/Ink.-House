@@ -1,0 +1,334 @@
+.headerBodyBurger {
+    display: none;
+
+    @include phones {
+        background: #E1EDE6;
+        height: 312px;
+        position: absolute;
+        z-index: 100000000;
+        top: 123px;
+        width: 100%;
+
+        .bodyBurgerList {
+            display: flex;
+            flex-direction: column;
+            padding-top: 10px;
+
+            li {
+                padding-bottom: 50px;
+
+                a {
+                    font-weight: 500;
+                    font-size: 18px;
+                    color: #2C2D35;
+                }
+            }
+        }
+    }
+}
+
+.active{
+
+    @include phones {
+        display: flex;
+    }
+}
+
+.edgeHeader {
+    width: 100%;
+    height: 100vh;
+
+    @include tablet768 {
+        height: 680px;
+    }   
+
+    @include tablet {
+        height: 412px;
+    }   
+
+    .headerMenu {
+        height: 100px;
+        background: $greenback;
+
+        @include phones {
+            position: relative; 
+        }
+
+        @include tablet768 {
+            height: 123px;
+        } 
+
+        @include phones {
+            &:before {
+                content: '';
+                position: absolute; 
+                height: 62px;
+                background: $white;
+                width: 100%;
+            }
+
+        }
+
+        .containerHeader {
+            display: flex;
+
+            @include tablet768 {
+                flex-direction: column;
+            } 
+
+            .headerMenuLogo {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                @include tablet {
+                    min-width: 143px;
+                    position: relative;
+                }
+
+                @include tablet768 {
+                    justify-content: center;
+                    padding: 16px 0;
+                    border-bottom: 1px solid #C3D1C6;
+                } 
+
+                @include phones {
+                    flex: 1;
+                    padding: 0;
+                    border-bottom: 0;
+                }
+
+                #iconStar {
+                    @include iconStar;
+                }
+
+                .headerMenuLogoTitle {
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: $green;
+                    margin-left: 8px;
+                }
+            }
+    
+            .headerMenuNavigation {
+                flex: 1;
+                display: flex;
+
+                ul {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    flex: 1;
+
+                    @include tablet768 {
+                        flex: 0;
+                        flex-basis: 362px;
+                        justify-content: space-between;
+                    } 
+
+                    @include phones {
+                        display: none;
+                    }
+
+                    li {
+                        padding-right: 60px;
+
+                        @include tablet {
+                            padding-right: 30px;
+                        }
+
+                        @include tablet768 {
+                            padding-right: 0;
+                        } 
+
+                        a {
+                            font-size: 20px;
+                            font-weight: 500;
+                            color: $black; 
+                            padding: 2px 5px;
+
+                            @include tablet {
+                                font-size: 18px;
+                            }
+
+                            &:hover {
+                                color: $green; 
+                            }
+
+                            &:focus {
+                                background: $greenfocus;
+                                color: $black;
+                            }
+
+                            &:active {
+                                color: $darkgreen;
+                                background: none;
+                            }
+                        }
+                    }
+                }
+
+                .headerBurger {
+                    display: none;
+
+                    @include phones {
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                    }
+
+                    .headerBurgerLine {
+                        position: relative;
+                        height: 2px;
+                        width: 20px;
+                        background: $black;
+                        border-radius: 2px;
+                        margin: 3px 0;
+                        transition: 0.2s;
+                    }
+
+                    .lineTopActive {
+                        margin-top: 8px;
+                        transform: rotate(45deg);
+                        top: 2px;
+                        transition: 0.2s;
+                    }
+
+                    .lineCenterActive {
+                        display: none;
+                        transition: 0.2s;
+                    }
+
+                    .lineBottonActive {
+                        transform: rotate(-45deg);
+                        bottom: 6px;
+                        transition: 0.2s;
+                    }
+                }
+
+                .headerMenuNavigationIcon {
+                    flex-basis: 24px;
+                    display: flex;
+                    align-items: center;
+
+                    @include tablet {
+                        flex: 1;
+                        justify-content: flex-end;
+                    }
+
+                    #iconCart {
+                        height: 24px;
+                        width: 24px;
+                    }
+
+                    .active {
+
+                        @include phones {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mainHeader {
+        height: calc(100% - 100px);
+
+        header {
+            height: 100%;
+            display: flex;
+
+            .headerImage {
+                flex: 1;
+                position: relative;
+
+                @include phones {
+                    display: none;
+                }
+
+                img {
+                    max-width: 90%;
+                    position: absolute;
+
+                    @include tablet {
+                        max-height: 360px;
+                        top: 60%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+
+                    @include tablet768 {
+                        max-height: 280px;
+                        top: 50%;
+                    }
+                }
+            }
+
+            .headerContent {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+
+                @include tablet {
+                    max-width: 330px;
+                }
+
+                @include tablet768 {
+                    max-width: 239px;
+                }
+
+                @include phones {
+                    max-width: 100%;
+                }
+
+                h1 {
+                    color: $black;
+                    max-width: 540px;
+
+                    @include phones {
+                        max-width: 239px;
+                    }
+                }
+
+                span {
+                    color: $green;
+                }
+
+                p {
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: $gray;
+                    max-width: 540px;
+
+                    @include tablet {
+                        font-size: 16px;
+                    }   
+                }
+                
+                button {
+                    @include button;
+
+                    &:hover {
+                        color: $white; 
+                        background: $green;
+                        border: 1px solid $green;
+                    }
+
+                    &:focus {
+                        color: $green; 
+                        background: $greenfocus;
+                        border: 1px solid $green;
+                    }
+
+                    &:active {
+                        color: $white; 
+                        background: $darkgreen;
+                        border: 1px solid $darkgreen;
+                    }
+                }
+            }
+        }
+    }
+}

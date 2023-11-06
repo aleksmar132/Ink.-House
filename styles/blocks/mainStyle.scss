@@ -1,0 +1,66 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+
+    @include tablet {
+        width: 90%;              
+    }
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 500;
+
+    @include tablet {
+        font-size: 40px;
+    }
+
+    @include tablet768 {
+        font-size: 28px;
+    }
+
+    @include phones {
+        font-size: 30px;
+    }
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 500;
+
+    @include tablet {
+        font-size: 30px;
+    }
+
+    @include tablet768 {
+        font-size: 24px;
+    }
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 500;
+
+    @include tablet {
+        font-size: 30px;
+    }
+
+    @include tablet768 {
+        font-size: 20px;
+    }
+
+    @include phones {
+        font-size: 24px;
+    }
+}
